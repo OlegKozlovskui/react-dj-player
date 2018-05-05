@@ -1,5 +1,22 @@
+* {
+	box-sizing: border-box;
+}
+
+html, body {
+	height: 100%;
+}
+
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+	font-family: 'Open Sans', sans-serif;
+	background: #2d2c34;
+	background-blend-mode: multiply;
 }
+
+.container {
+	max-width: 1200px;
+	padding: 0 15px;
+	margin: 0 auto;
+}
+

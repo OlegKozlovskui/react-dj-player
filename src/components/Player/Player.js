@@ -3,6 +3,7 @@ import { VolumeSlider, ProgressBar } from 'react-player-controls';
 
 import './Player.css';
 import Plate from '../Plate/Plate';
+import Controls from '../Controls/Controls';
 import Playlist from '../Playlist/Playlist';
 
 class Player extends Component {
@@ -43,6 +44,15 @@ class Player extends Component {
           onSeekEnd={time => this.setState(() => ({ lastSeekEnd: time }))}
           onIntent={time => this.setState(() => ({ lastIntent: time }))}
         />
+        <div className="controls-block">
+          <Controls />
+          <i class="fas fa-volume-off"></i>
+          <VolumeSlider
+            direction="HORIZONTAL"
+            volume={this.state.volume}
+            onVolumeChange={this.handleVolumeChange}
+            isEnabled={true} />
+        </div>
         <Playlist />
       </div>
     ) 

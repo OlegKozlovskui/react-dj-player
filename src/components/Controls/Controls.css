@@ -1,0 +1,24 @@
+.control-btn {
+	background: #2b2b2b;
+	color: #d3d2d0;
+	border: 1px solid #212226;
+	width: 50px;
+	height: 30px;
+	cursor: pointer;
+	font-size: 10px;
+	transition: color 0.4s ease;
+}
+
+.control-btn.active, .control-btn:hover {
+	color: #21cfdf;
+}
+
+.control-btn:first-of-type {
+	border-radius: 2px 0 0 2px;
+}
+
+.control-btn:last-of-type {
+	border-radius: 0 0 2px 2px;
+}
+
+

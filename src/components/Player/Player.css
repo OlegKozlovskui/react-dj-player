@@ -3,6 +3,20 @@
 	flex-direction: column;
 }
 
+.controls-block {
+	display: flex;
+	margin-top: 10px;
+}
+
+.fa-volume-off {
+	margin: 7px 10px 0 auto;
+	color: #21cfdf;
+}
+
+.VolumeSlider {
+	margin-top: 11px;
+}
+
 .ProgressBar, .VolumeSlider {
 	position: relative;
 	background: #eee;
@@ -24,7 +38,7 @@
 	position: absolute;
 	width: 16px;
 	height: 16px;
-	background: #72D687;
+	background: #21cfdf;
 	border-radius: 100%;
 	transform: scale(0);
 	transition: transform 0.2s;
@@ -58,7 +72,7 @@
 .VolumeSlider.isSeekable .VolumeSlider-value,
 .VolumeSlider.isEnabled .ProgressBar-elapsed,
 .VolumeSlider.isEnabled .VolumeSlider-value {
-	background: #72D687; }
+	background: #21cfdf; }
 
 .ProgressBar {
 	height: 8px;
@@ -112,7 +126,7 @@
 }
 
 .VolumeSlider.isHorizontal {
-	width: 100px;
+	width: 50px;
 	height: 8px;
 	transition: width 0.3s, height 0.05s;
 }

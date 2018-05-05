@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import './DjPlayer.css';
 import Player from '../Player/Player';
+import GlobalControls from '../GlobalControls/GlobalControls';
 
 class DjPlayer extends Component {
   state = {
@@ -12,6 +13,7 @@ class DjPlayer extends Component {
     return(
       <div className="container dj-player">
         <Player />
+        <GlobalControls />
         <Player />
       </div>
     ) 

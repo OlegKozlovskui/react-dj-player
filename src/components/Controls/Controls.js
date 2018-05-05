@@ -3,28 +3,27 @@ import React, { Component } from 'react';
 import './Controls.css';
 
 class Controls extends Component {
-  state = {
-
-  }
-
   render() {
+    
     return(
       <div className="controls">
-        <button className="control-btn active">
-          <i class="fas fa-play"></i>
+        {this.props.paused ? (
+          <button className="control-btn" onClick={() => this.props.onPlay()}>
+            <i className="fas fa-play"></i>
+          </button>
+        ) : (
+          <button className="control-btn" onClick={() => this.props.onPause()}>
+            <i className="fas fa-pause"></i>
+          </button>
+        )}
+        <button className="control-btn" onClick={() => this.props.onStop()}>
+          <i className="fas fa-stop" ></i>
         </button>
-        <button className="control-btn">
-          <i class="fas fa-pause"></i>
+        <button className="control-btn" >
+          <i className="fas fa-step-backward" onClick={() => this.props.onPrev()}></i>
         </button>
-        <button className="control-btn">
-          <i class="fas fa-stop"></i>
-        </button>
-        <button className="control-btn">
-          <i class="fas fa-step-backward"></i>
-        </button>
-
-        <button className="control-btn">
-          <i class="fas fa-step-forward"></i>
+        <button className="control-btn" onClick={() => this.props.onNext()}>
+          <i className="fas fa-step-forward"></i>
         </button>
       </div>
     )

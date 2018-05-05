@@ -4,4 +4,17 @@
 	background: url("../../img/plate.png") no-repeat;
 	align-self: center;
 	margin-bottom: 30px;
+	border-radius: 50%;
+	transition: box-shadow 0.3s ease;
+}
+
+.plate.active {
+	-webkit-box-shadow: 0px 0px 10px 2px #21cfdf;
+	box-shadow: 0px 0px 10px 2px #21cfdf;
+	animation: plate-animation 2s linear infinite;
+}
+
+@keyframes plate-animation {
+	from { transform: rotate(0deg); }
+	to   { transform: rotate(360deg); }
 }

@@ -1,0 +1,9 @@
+.global-controls .control-btn {
+	width: 60px;
+	height: 40px;
+}
+
+.global-controls .VolumeSlider.isHorizontal  {
+	width: 120px;
+	margin-top: 15px;
+}

@@ -23,7 +23,7 @@
 	border-bottom: 1px solid #212226;
 }
 
-.track:hover, .track:active {
+.track:hover, .track.active {
 	color: #21cfdf;
 }
 

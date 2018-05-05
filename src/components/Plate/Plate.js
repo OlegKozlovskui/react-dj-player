@@ -2,10 +2,10 @@ import React from 'react';
 
 import './Plate.css';
 
-const Plate = () => {
+const Plate = ({active}) => {
+
   return(
-    <div className="plate">
-    </div>
+    <div className={`${active ? '' : 'active'} plate`}></div>
   )
 }
 

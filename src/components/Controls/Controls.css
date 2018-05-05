@@ -13,6 +13,10 @@
 	color: #21cfdf;
 }
 
+.control-btn:focus {
+	outline: none;
+}
+
 .control-btn:first-of-type {
 	border-radius: 2px 0 0 2px;
 }

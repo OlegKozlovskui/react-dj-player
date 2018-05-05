@@ -2,4 +2,6 @@
 	width: 250px;
 	height: 250px;
 	background: url("../../img/plate.png") no-repeat;
+	align-self: center;
+	margin-bottom: 30px;
 }

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { VolumeSlider, ProgressBar } from 'react-player-controls';
+import { connect } from 'react-redux';
 
 import './Player.css';
 import Plate from '../Plate/Plate';
@@ -45,8 +46,18 @@ class Player extends Component {
   componentWillReceiveProps(nextProps) {
     console.log('nextProps', nextProps);
   }
+  
+  componentWillMount() {
+    const { leftTracks, rightTracks } = this.props;
+    console.log(this.props);
+    
+    if(leftTracks.length === 0 || rightTracks === 0) {
+      this.props.history.push('/');
+    }
+  }
 
   handlePlay = () => {
+    console.log(this.audio.name);
     this.audio.play();
     console.log(this.audio.paused);
   }
@@ -126,11 +137,10 @@ class Player extends Component {
     const { currentTrack, totalTime, currentTime, activeName } = this.state;
     const isPaused = this.audio && this.audio.paused;
 
-    console.log(isPaused);
     return(
       <div className="player">
         <audio ref={audio => this.audio = audio}
-               preload="true"
+               onLoadedMetadata={event => console.log('sss', event.target)}
                src={currentTrack && currentTrack.src}
                onTimeUpdate={this.handleUpdateTime} />
         <Plate active={isPaused} />
@@ -165,4 +175,11 @@ class Player extends Component {
   }
 }
 
-export default Player;
+const mapStateToProps = state => {
+  return {
+    leftTracks: state.leftTracks,
+    rightTracks: state.rightTracks
+  }
+}
+
+export default connect(mapStateToProps)(Player);

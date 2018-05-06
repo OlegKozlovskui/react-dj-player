@@ -5,7 +5,7 @@ import './Playlist.css';
 const playlist = [
   {
     id: 0,
-    src: 'http://www.tutorialrepublic.com/examples/audio/birds.mp3',
+    src: 'http://www.tutorialrepublic.com/examples/audio/wind.mp3',
     name: 'Track 1',
     totalTime: 16
   },
@@ -39,8 +39,6 @@ class Playlist extends Component {
   }
 
   renderPlaylist = playlist => {
-
-
     if(playlist.length) {
       return playlist.map((track, i) => (
           <li className={`track ${this.props.name === track.name ? 'active' : ''}`}

@@ -12,9 +12,9 @@ class DjPlayer extends Component {
   render() {
     return(
       <div className="container dj-player">
-        <Player />
+        <Player history={this.props.history}/>
         <GlobalControls />
-        <Player />
+        <Player history={this.props.history}/>
       </div>
     ) 
   }

@@ -3,7 +3,18 @@
 	height: 40px;
 }
 
-.global-controls .VolumeSlider.isHorizontal  {
-	width: 120px;
+.global-volume {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
 	margin-top: 15px;
+}
+
+.global-volume .VolumeSlider.isHorizontal  {
+	width: 100px;
+	margin-top: 0;
+}
+
+.global-volume .fa-volume-off {
+	margin-top: 0;
 }

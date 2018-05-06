@@ -15,7 +15,7 @@ class App extends Component {
   render() {
     return (
       <Provider store={store}>
-        <Router>
+        <Router basename="/react-dj-player/">
           <Fragment>
             <Header />
             <Route exact path="/" component={Home} />

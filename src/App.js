@@ -5,6 +5,7 @@ import { createStore } from 'redux';
 
 import reducer from './store/reducer';
 import Header from './components/Header/Header';
+import Home from './components/Home/Home';
 import DjPlayer from './components/DjPlayer/DjPlayer';
 import Upload from './components/Upload/Upload';
 
@@ -17,7 +18,8 @@ class App extends Component {
         <Router>
           <Fragment>
             <Header />
-            <Route exact path="/" component={Upload} />
+            <Route exact path="/" component={Home} />
+            <Route exact path="/upload" component={Upload} />
             <Route exact path="/player" component={DjPlayer} />
           </Fragment>
         </Router>

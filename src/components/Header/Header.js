@@ -9,7 +9,7 @@ const Header = () => {
       <Link to="/" className="logo">DJ-Player</Link>
       <nav className="nav">
         <ul>
-          <li><Link to="/" >Upload</Link></li>
+          <li><Link to="/upload" >Upload</Link></li>
         </ul>
       </nav>
     </header>

@@ -1,23 +1,27 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
 import './DjPlayer.css';
 import Player from '../Player/Player';
 import GlobalControls from '../GlobalControls/GlobalControls';
 
 class DjPlayer extends Component {
-  state = {
-  
-  }
-  
   render() {
     return(
       <div className="container dj-player">
-        <Player history={this.props.history}/>
+        <Player history={this.props.history} playlist={this.props.leftTracks} />
         <GlobalControls />
-        <Player history={this.props.history}/>
+        <Player history={this.props.history} playlist={this.props.rightTracks}/>
       </div>
     ) 
   }
 }
 
-export default DjPlayer;
+const mapStateToProps = state => {
+  return {
+    leftTracks: state.leftTracks,
+    rightTracks: state.rightTracks
+  }
+}
+
+export default connect(mapStateToProps)(DjPlayer);

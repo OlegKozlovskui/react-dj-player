@@ -34,7 +34,6 @@ class Tracks extends Component {
       </ul>
     )
   }
-
 }
 
 export default connect(null, { removeLeftTrack, removeRightTrack })(Tracks);

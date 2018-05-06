@@ -85,7 +85,6 @@ class Player extends Component {
         }
       }, this.handlePlay);
     } else {
-      console.log(track);
       this.setState({
         currentTrack: track,
         currentTime: 0,
@@ -124,7 +123,6 @@ class Player extends Component {
   }
 
   handleSeekChange = time => {
-    console.log(55);
     this.setState({ currentTime: time });
     this.audio.currentTime = time;
   }

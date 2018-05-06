@@ -199,3 +199,15 @@
 	position: relative;
 	top: -1px;
 }
+
+@media screen and (max-width:1100px) {
+	.ProgressBar {
+		width: 350px;
+	}
+}
+
+@media screen and (max-width:980px) {
+	.player {
+		order: 2;
+	}
+}

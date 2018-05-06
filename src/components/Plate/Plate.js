@@ -3,8 +3,7 @@ import React from 'react';
 import './Plate.css';
 
 const Plate = ({active}) => {
-
-  return(
+  return (
     <div className={`${active ? '' : 'active'} plate`}></div>
   )
 }

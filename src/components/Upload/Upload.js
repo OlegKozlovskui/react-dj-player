@@ -12,7 +12,6 @@ import guid from '../../utils/guid';
 
 class Upload extends Component {
   handleDrop = async (files, type) => {
-    console.log(files);
     const transformedFiles = files.map( async(f, i) => {
       const tags = await universalParse(f.preview);
       return {
@@ -67,7 +66,6 @@ class Upload extends Component {
       </div>
     )
   }
-
 }
 
 const mapStateToProps = state => {

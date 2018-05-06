@@ -3,3 +3,11 @@
 	justify-content: space-around;
 	margin-top: 70px;
 }
+
+@media screen and (max-width:980px) {
+	.dj-player {
+		justify-content: center;
+		flex-direction: column;
+		align-items: center;
+	}
+}

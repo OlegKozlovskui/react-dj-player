@@ -4,7 +4,6 @@ import './Controls.css';
 
 class Controls extends Component {
   render() {
-    
     return(
       <div className="controls">
         {this.props.paused ? (
@@ -36,7 +35,6 @@ class Controls extends Component {
       </div>
     )
   }
-
 }
 
 export default Controls;
